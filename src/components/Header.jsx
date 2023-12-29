@@ -27,14 +27,14 @@ function Header() {
         <h1 className="text-3xl font-bold text-center text-white">
           My Dictionary
         </h1>
-        <p className="text-center mt-1 mb-10 text-slate-300 text-lg">
+        <p className="text-center mt-1 mb-6 text-slate-300 text-lg">
           Find definitions for word
         </p>
 
-        <div className="flex items-center justify-center mt-5">
-          <div className="flex border-2 border-gray-200 rounded">
+        <div className="flex flex-col items-center justify-center mt-5">
+          <div className="flex flex-col md:flex-row items-center border-2 border-gray-200 rounded">
             <input
-              className="px-4 py-2 md:w-80"
+              className="px-4 py-2 md:w-80 mb-2 md:mb-0"
               type="text"
               placeholder="Search..."
               onChange={handleInputChange}
@@ -42,7 +42,7 @@ function Header() {
               value={value}
             />
             <button
-              className="bg-blue-400 border-l px-4 py-2 text-white"
+              className="bg-blue-400 md:border-l px-4 py-2 text-white"
               onClick={handleSubmit}
             >
               Search
@@ -50,9 +50,9 @@ function Header() {
           </div>
 
           {inputValue && (
-            <h3 className="text-gray-50 text-center mt-4 ml-12">
+            <h3 className="text-gray-50 text-center mt-4 md:ml-12">
               Result for :
-              <span className="text-white font-bold ml-4">{inputValue}</span>
+              <span className="text-white font-bold ml-2 md:ml-4">{inputValue}</span>
             </h3>
           )}
         </div>
@@ -62,3 +62,4 @@ function Header() {
 }
 
 export default Header;
+              
